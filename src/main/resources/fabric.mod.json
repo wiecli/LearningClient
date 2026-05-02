@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "learningclient",
+  "version": "${version}",
+
+  "name": "LearningClient",
+  "description": "",
+  "authors": [
+    "wiecli"
+  ],
+  "contributors": [
+    "Gaby_pyf"
+  ],
+  "contact": {
+    "homepage": "https//github.com/wiecli"
+  },
+
+  "license": "All-Rights-Reserved",
+  "icon": "assets/learningclient/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": ["learningclient.client.LearningClientClient"]
+  },
+
+  "mixins": [
+    "learningclient.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
