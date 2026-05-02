@@ -20,7 +20,9 @@
 
   "environment": "client",
   "entrypoints": {
-    "client": ["learningclient.client.LearningClientClient"]
+    "client": [
+      "learningclient.client.LearningClient"
+    ]
   },
 
   "mixins": [
@@ -31,5 +33,7 @@
     "fabricloader": ">=${loader_version}",
     "fabric-api": "*",
     "minecraft": "${minecraft_version}"
-  }
+  },
+  "accessWidener": "learningclient.accesswidener"
+
 }

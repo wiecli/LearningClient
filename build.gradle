@@ -11,6 +11,9 @@ base {
 }
 
 
+loom {
+    accessWidenerPath = file("src/main/resources/learningclient.accesswidener")
+}
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -25,7 +28,8 @@ dependencies {
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
     modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
-
+    compileOnly 'org.projectlombok:lombok:1.18.36'
+    annotationProcessor 'org.projectlombok:lombok:1.18.36'
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
 }
 

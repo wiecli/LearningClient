@@ -1,5 +1,6 @@
 package learningclient.mixin;
 
+import learningclient.client.LearningClient;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.font.TextRenderer;
 import net.minecraft.client.gui.DrawContext;
@@ -15,7 +16,7 @@ public class FirstTestMixin {
 
     @Inject(method = "render", at = @At(value = "HEAD"))
     public void render(DrawContext context, int mouseX, int mouseY, float delta, CallbackInfo callbackInfo){
-        String hello =  "Hello Minecraft!";
+        String hello = LearningClient.instance.clientName + " " + LearningClient.instance.clientVersion;
         TextRenderer textRenderer = MinecraftClient.getInstance().textRenderer;
         context.drawTextWithShadow(textRenderer, hello, 2, 2, ColorHelper.getWhite(1.0F));
     }

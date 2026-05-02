@@ -4,7 +4,8 @@
   "package": "learningclient.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "FirstTestMixin"
+    "FirstTestMixin",
+    "CreateClientButtonMixin"
   ],
   "client": [
   ],
